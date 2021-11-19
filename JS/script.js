@@ -8,10 +8,10 @@
 
 
 // chiedere il numero di km che si vuole percorrere
-let distanza = prompt ("Quanti KM si vuole percorrere?");
+let distanza = parseInt(prompt("Quanti KM si vuole percorrere?"));
 console.log (distanza);
 // chiedere età
-let etaUser = prompt ("Quanti anni hai?");
+let etaUser = parseInt(prompt("Quanti anni hai?"));
 console.log (etaUser);
 // calcolare prezzo base del biglietto
 let prezzoBase = distanza * 0.21;
@@ -23,13 +23,17 @@ let prezzoBase = distanza * 0.21;
 
 if (etaUser < 18) {
 
-    console.log((prezzoBase / 100) * 20);
+    let totaleUnder = ((prezzoBase / 100) * 20);
+    let prezzoUnder = totaleUnder.toFixed(2)
 
 } else if (etaUser > 65) {
 
-    console.log((prezzoBase / 100) * 40);
+    let totaleOver = ((prezzoBase / 100) * 40);
+    let prezzoOver =totaleOver.toFixed(2)
 
 } else if (etaUser >= 18) {
 
-    console.log(prezzoBase);
+    let somma = (prezzoBase);
+    let sommaTot = somma.toFixed(2);
+    console.log(sommaTot);
 }
