@@ -25,15 +25,20 @@ if (etaUser < 18) {
 
     let totaleUnder = ((prezzoBase / 100) * 20);
     let prezzoUnder = totaleUnder.toFixed(2)
+    console.log(prezzoUnder)
+    document.getElementById("biglietto").innerHTML = "€" + prezzoUnder;
 
 } else if (etaUser > 65) {
 
     let totaleOver = ((prezzoBase / 100) * 40);
     let prezzoOver =totaleOver.toFixed(2)
+    console.log(prezzoOver)
+    document.getElementById("biglietto").innerHTML = "€" + prezzoOver;
 
 } else if (etaUser >= 18) {
 
     let somma = (prezzoBase);
     let sommaTot = somma.toFixed(2);
     console.log(sommaTot);
+    document.getElementById("biglietto").innerHTML = "€" + sommaTot;
 }
