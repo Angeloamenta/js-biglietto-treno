@@ -20,7 +20,7 @@ console.log (etaUser);
 let prezzoBase = distanza * 0.21;
 // console.log(prezzoBase);
 
-// check if number
+// check if age is a number
 if (isNaN(etaUser) || etaUser < 1) {
     alert("Il valore inserito NON è un numero, aggiorna la pagina e Riprova")
     console.log("Not a number");
@@ -28,8 +28,20 @@ if (isNaN(etaUser) || etaUser < 1) {
 }else if (!(isNaN(etaUser))) {
 
      console.log("Yes");
+ }
+
+//  check if km is Nan or 0
+
+if (isNaN(distanza) || distanza < 1) {
+    alert("Il valore inserito NON è un numero, aggiorna la pagina e Riprova")
+    console.log("Not a number");
+
+}else if (!(isNaN(distanza))) {
+
+     console.log("Yes");
 
  }
+
 
 // applicare sconto in base all'età
 // minorenni sconto del 20%
