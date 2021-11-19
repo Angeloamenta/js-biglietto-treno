@@ -23,14 +23,16 @@ let prezzoBase = distanza * 0.21;
 
 if (etaUser < 18) {
 
-    let totaleUnder = ((prezzoBase / 100) * 20);
+    let scontoVenti = ((prezzoBase / 100)  * 20);
+    let totaleUnder = (prezzoBase - scontoVenti);
     let prezzoUnder = totaleUnder.toFixed(2)
     console.log(prezzoUnder)
     document.getElementById("biglietto").innerHTML = "€" + prezzoUnder;
 
 } else if (etaUser > 65) {
 
-    let totaleOver = ((prezzoBase / 100) * 40);
+    let scontoOver = ((prezzoBase / 100) * 40);
+    let totaleOver = (prezzoBase - scontoOver);
     let prezzoOver =totaleOver.toFixed(2)
     console.log(prezzoOver)
     document.getElementById("biglietto").innerHTML = "€" + prezzoOver;
